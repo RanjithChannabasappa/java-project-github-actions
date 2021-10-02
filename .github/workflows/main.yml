@@ -15,5 +15,7 @@ jobs:
           java-version: 1.8
       - name: Generate the package
         run: mvn -B package --file pom.xml
+      - name: Ansible
+        run: ansible --version
       #- name: Deploy to tomcat
        # run: curl -v -u ${{ secrets.TOMCAT_USER }}:${{ secrets.TOMCAT_PASSWORD }} -T /home/ubuntu/actions-runner/_work/java-project-github-actions/java-project-github-actions/target/WebApp-pipeline.war 'http://13.233.87.180:8080//manager/text/deploy?path=/web_app&update=true'
