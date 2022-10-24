@@ -17,5 +17,5 @@ jobs:
         run: mvn -B package --file pom.xml
      # - name: Ansible
       #  run: ansible --version
-     # - name: Deploy to tomcat
-      #  run: curl -v -u admin:admin -T /home/runner/work/java-project-github-actions/java-project-github-actions/target/WebApp-pipeline.war 'http://3.110.174.175:8080//manager/text/deploy?path=/web_app&update=true'
+      - name: Deploy to tomcat
+        run: curl -v -u admin:admin -T /home/runner/work/java-project-github-actions/java-project-github-actions/target/WebApp-pipeline.war 'http://3.110.174.175:8080//manager/text/deploy?path=/web_app&update=true'
